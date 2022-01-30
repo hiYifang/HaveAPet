@@ -1,0 +1,18 @@
+.text-align-custom {
+  text-align: center;
+}
+
+.text-align-custom-reverse {
+  text-align: left;
+}
+
+// 桌面版 - Breakpoints
+@include media-breakpoint-up(lg) {
+  .text-align-custom {
+    text-align: left;
+  }
+
+  .text-align-custom-reverse {
+    text-align: center;
+  }
+}

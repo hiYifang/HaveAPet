@@ -1,0 +1,25 @@
+// navbar 按鈕
+.btn-custom-navbar {
+  color: $secondary;
+  &:hover, &.active {
+    /* offset-x | offset-y | blur-radius | spread-radius | color */
+    box-shadow: 0px 2px 0px 0px rgba($black, 0.8);
+  }
+}
+
+// 按鈕
+.btn-custom {
+  color: $secondary;
+  border-color: $secondary;
+  &:hover, &.active {
+    border-color: $primary;
+  }
+}
+
+// 連結
+.link-custom {
+  color: $secondary;
+  &:hover, &.active {
+    color: $primary;
+  }
+}

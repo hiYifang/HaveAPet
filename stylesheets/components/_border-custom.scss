@@ -1,0 +1,14 @@
+.border-top-custom {
+  border-top: 3px solid $primary;
+}
+
+.border-bottom-custom {
+  border-bottom: 3px solid $primary;
+}
+
+// 桌面版 - Breakpoints
+@include media-breakpoint-up(lg) {
+  .border-bottom-custom {
+    border-bottom: none;
+  }
+}

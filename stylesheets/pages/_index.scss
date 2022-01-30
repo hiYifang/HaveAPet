@@ -1,0 +1,108 @@
+// 廣告圖
+.header {
+  background-image: url(./images/home_mobile.png);
+  height: 635px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+
+// 利用 hover 顯示不同文字效果
+.card-hover {
+  .card-img {
+    transform: scale(1);
+    transition: 0.3s ease-in-out;
+  }
+
+  .hover-show-text {
+    opacity: 0;
+  }
+}
+
+.card-hover:hover {
+  .card-img {
+    transform: scale(1.1);
+  }
+  .hover-show-text {
+    opacity: 1;
+  }
+}
+
+// 利用 hover 顯示陰影效果、切換圖片
+.card-hover-shadow {
+  margin-right: 30px; /* 向左延伸 */
+  box-shadow: $box-shadow;
+
+  .backend-img {
+    display: none;
+  }
+
+  &:hover,
+  &.active {
+    margin-right: 0;
+    box-shadow: $box-shadow-lg;
+
+    .front-img {
+      display: none;
+    }
+
+    .backend-img {
+      display: inline-block;
+    }
+  }
+}
+
+// 製作對話框 + 切換圖片
+.top {
+  .btn {
+    border: 2px solid #3a3a3a;
+    background-color: #ffffff;
+    &::before {
+      content: ""; /* 讓before顯示出來 */
+      position: absolute;
+      bottom: -0.4rem; /* 調整位置 */
+      left: 3.9rem; /* 調整位置 */
+      padding: 0.3rem; /*做出對話框的角*/
+      background-color: inherit;
+      border: inherit; /* 讓 before 繼承 btn 的 CSS 屬性 */
+      border-top: 0; /* 隱藏內邊的 border */
+      border-left: 0; /* 隱藏內邊的 border */
+      transform: rotate(45deg); /* 旋軟角度 */
+    }
+  }
+
+  .backend-img {
+    display: none;
+  }
+
+  &:hover,
+  &.active {
+    .front-img {
+      display: none;
+    }
+
+    .backend-img {
+      display: inline-block;
+    }
+  }
+}
+
+// 桌面版 - Breakpoints
+@include media-breakpoint-up(lg) {
+  .header {
+    background-image: url(/images/home.png);
+    height: 810px;
+    background-position: center center;
+  }
+
+  .card-hover:hover {
+    .card-img {
+      transform: none;
+      filter: opacity(80%);
+    }
+  }
+
+  .card-hover-shadow {
+    margin-right: 0;
+  }
+}

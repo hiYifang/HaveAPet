@@ -1,0 +1,86 @@
+// 利用 hover 顯示前方線條
+.list-group-item {
+  padding-left: 0px;
+  background-color: transparent;
+
+  a {
+    color: #3a3a3a;
+  }
+
+  &:hover,
+  &.active {
+    a {
+      color: #f9c745;
+    }
+  }
+}
+
+// 利用 hover 顯示不同文字效果
+.card-hover-design {
+  .card-img {
+    transform: scale(1);
+    transition: 0.3s ease-in-out;
+  }
+
+  .hover-show-text {
+    opacity: 0;
+  }
+}
+
+.card-hover-design:hover {
+  .card-img {
+    transform: scale(1.1);
+  }
+  .hover-show-text {
+    opacity: 1;
+  }
+}
+
+// 桌面版 - Breakpoints
+@include media-breakpoint-up(lg) {
+  .list-group-item {
+    &:hover,
+    &.active {
+      a {
+        &::before {
+          content: "\2014";
+          padding-right: 1rem;
+        }
+      }
+    }
+  }
+
+  .card-hover-design:hover {
+    .card-img {
+      transform: none;
+      filter: opacity(80%);
+    }
+
+    .front-text {
+      animation: dissolveInTop 0.7s ease-in-out;
+      @-webkit-keyframes dissolveInTop {
+        0% {
+          opacity: 0;
+          transform: translate3d(0, -10px, 0);
+        }
+        100% {
+          opacity: 1;
+          transform: translate3d(0, 0, 0);
+        }
+      }
+    }
+    .backend-text {
+      animation: dissolveInBottom 0.7s ease-in-out;
+      @-webkit-keyframes dissolveInBottom {
+        0% {
+          opacity: 0;
+          transform: translate3d(0, 10px, 0);
+        }
+        100% {
+          opacity: 1;
+          transform: translate3d(0, 0, 0);
+        }
+      }
+    }
+  }
+}

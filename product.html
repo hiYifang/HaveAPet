@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Full of fur、Full of love，您出錢、我出力、一起助浪浪。">
+  <meta name="keywords" content="撿到寶">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/images/icon.png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="./css/all.css">
+  <title>撿到寶</title>
+</head>
+
+<body>
+  <!-- navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom-custom">
+    <div class="container">
+      <a class="navbar-brand" href="./index.html">
+        <img src="./images/logo.png" alt="logo" width="118" height="40">
+      </a>
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item me-6">
+            <a class="nav-link" aria-current="page" href="./index.html">首頁</a>
+          </li>
+          <li class="nav-item me-6">
+            <a class="nav-link" href="./service.html">服務介紹</a>
+          </li>
+          <li class="nav-item me-6">
+            <a class="nav-link" href="./design.html">設計作品</a>
+          </li>
+          <li class="nav-item me-6">
+            <a class="nav-link" href="./adoptions.html">領養專區</a>
+          </li>
+          <li class="nav-item mt-1 mt-lg-0">
+            <a class="btn btn-primary btn-custom-navbar active px-6" href="./product.html">毛孩似顏繪</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- header -->
+  <header class="container-fluid bg-custom">
+    <h1 class="mb-0">
+      <div class="d-none d-md-flex justify-content-center">
+        <img src="./images/banner.png" class="img-fluid" alt="banner">
+      </div>
+      <div class="d-flex d-md-none justify-content-center pt-3">
+        <img src="./images/banner_service-sm.png" class="img-fluid" alt="banner_service-sm">
+      </div>
+    </h1>
+  </header>
+
+  <!-- 表單 -->
+  <section class="pt-3 pb-8 pt-lg-8 bg-custom">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <form class="border-top border-primary border-5 rounded-custom bg-white shadow-sm p-4 needs-validation"
+            novalidate>
+            <h2 class="h4 fw-bold text-center mb-8">填寫訂購資訊</h2>
+            <!-- 表單內容 -->
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label for="username" class="form-label">名字 *</label>
+                <input type="text" class="form-control" id="username" placeholder="小明" required>
+                <div class="invalid-feedback">
+                  請輸入名字
+                </div>
+              </div>
+              <div class="col-md-6">
+                <label for="user" class="form-label">姓氏 *</label>
+                <input type="text" class="form-control" id="user" placeholder="王" required>
+                <div class="invalid-feedback">
+                  請輸入姓氏
+                </div>
+              </div>
+              <div class="col-12">
+                <label for="inputTel" class="form-label">手機號碼 *</label>
+                <input type="tel" class="form-control" id="inputTel" placeholder="0912345678" required>
+                <div class="invalid-feedback">
+                  請輸入手機號碼
+                </div>
+              </div>
+              <div class="col-12">
+                <label for="inputEmail" class="form-label">電子郵件 *</label>
+                <input type="email" class="form-control" id="inputEmail" placeholder="name@gmail.com" required>
+                <div class="invalid-feedback">
+                  請輸入電子郵件
+                </div>
+              </div>
+              <div class="col-12">
+                <label for="inputAddress" class="form-label">收件地址 *</label>
+                <div class="row">
+                  <div class="col-md-6 mb-1">
+                    <select class="form-select" id="selectCity">
+                      <option selected disabled value="">請選擇城市</option>
+                      <option value="Tainan">台南</option>
+                      <option value="Taichung">台中</option>
+                      <option value="Taipei">台北</option>
+                      <option value="Daito">台東</option>
+                    </select>
+                  </div>
+                  <div class="col-md-6 mb-1">
+                    <select class="form-select" id="selectZone">
+                      <option selected disabled value="">請選擇區域</option>
+                      <option value="South">南區</option>
+                      <option value="Weat">西區</option>
+                      <option value="North">北區</option>
+                      <option value="East">東區</option>
+                    </select>
+                  </div>
+                  <div class="col-12">
+                    <input type="text" class="form-control" id="inputAddress" placeholder="請輸入詳細地址" required>
+                    <div class="invalid-feedback">
+                      請輸入詳細地址
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12">
+                <label for="selectDesign" class="form-label">選擇設計師風格 *</label>
+                <select class="form-select" id="selectDesign" required>
+                  <option selected value="Meili">Meili</option>
+                  <option value="Zoe">Zoe</option>
+                  <option value="Michael">Michael</option>
+                  <option value="Birdy">Birdy</option>
+                </select>
+              </div>
+              <div class="col-12">
+                <label for="selectPay" class="form-label">付款方式 *</label>
+                <select class="form-select" id="selectPay" required>
+                  <option selected value="cash on delivery">貨到付款</option>
+                  <option value="wire transfer">電子轉帳</option>
+                  <option value="remit">郵局匯款</option>
+                </select>
+              </div>
+              <div class="col-12">
+                <label for="checkAdd" class="form-label"> 加購服務 </label>
+                <ul class="list-unstyled mb-0" id="checkAdd">
+                  <li class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="送禮用包裝">
+                    <label class="form-check-label" for="inlineCheckbox1">送禮用包裝 + 100</label>
+                  </li>
+                  <li class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="無框畫">
+                    <label class="form-check-label" for="inlineCheckbox2">無框畫 + 250</label>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-12">
+                <label for="inputTextarea" class="form-label">備註說明</label>
+                <textarea class="form-control" id="inputTextarea" rows="3"></textarea>
+              </div>
+            </div>
+            <p class="h4 fw-bold text-center my-3 my-lg-4">總金額 NT$ 300</p>
+            <div class="text-center my-2">
+              <button type="submit" class="btn btn-primary btn-custom-navbar px-6"
+                style="font-size: 24px;">送出訂購資訊</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 加入奴才團隊 -->
+  <section class="border-top-custom">
+    <div class="container">
+      <div class="row justify-content-center align-content-center my-6">
+        <div class="col-lg-5 mb-6 mb-lg-0">
+          <div class="row align-content-center text-align-custom g-4">
+            <div class="col-lg-5">
+              <img src="./images/link01.png" class="img-fluid mb-3 mb-lg-0" alt="link01">
+            </div>
+            <div class="col-lg-7">
+              <h3 class="h4">加入奴才團隊</h3>
+              <p class="mb-2">我也會畫畫，希望能盡一份心力！</p>
+              <a class="btn btn-outline-primary btn-custom px-6" href="./product.html">聯絡我們</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-5">
+          <div class="row align-content-center text-align-custom g-4">
+            <div class="col-lg-5">
+              <img src="./images/link02.png" class="img-fluid mb-3 mb-lg-0" alt="link02">
+            </div>
+            <div class="col-lg-7">
+              <h3 class="h4">加入奴才團隊</h3>
+              <p class="mb-2">我也會畫畫，希望能盡一份心力！</p>
+              <a class="btn btn-outline-primary btn-custom px-6" href="./adoptions.html">領養專區</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 版權所有 -->
+  <footer class="text-center text-white bg-secondary py-3">
+    <p class="mb-0">Copyright © 2021 撿到寶.All rights reserved.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+
+  <script>
+    // 驗證
+    // Example starter JavaScript for disabling form submissions if there are invalid fields
+    (function () {
+      "use strict";
+
+      // Fetch all the forms we want to apply custom Bootstrap validation styles to
+      var forms = document.querySelectorAll(".needs-validation");
+
+      // Loop over them and prevent submission
+      Array.prototype.slice.call(forms).forEach(function (form) {
+        form.addEventListener(
+          "submit",
+          function (event) {
+            if (!form.checkValidity()) {
+              event.preventDefault();
+              event.stopPropagation();
+            }
+
+            form.classList.add("was-validated");
+          },
+          false
+        );
+      });
+    })();
+  </script>
+</body>
+
+</html>
